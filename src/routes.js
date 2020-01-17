@@ -33,28 +33,28 @@ const dashboardRoutes = [
     name: "Newsfeed",
     icon: Notifications,
     component: NewsFeed,
-    layout: "/profile"
+    layout: "/PocketParliamentWebApp/profile"
   },
   {
     path: "/bills",
     name: "Bills",
     icon: LibraryBooks,
     component: BillView,
-    layout: "/profile"
+    layout: "/PocketParliamentWebApp/profile"
   },
   {
     path: "/cabinet",
     name: "Cabinet Members",
     icon: Parliament,
     component: CabinetView,
-    layout: "/profile"
+    layout: "/PocketParliamentWebApp/profile"
   },
   {
     path: "/mps",
     name: "MP's",
     icon: Person,
     component: MPView,
-    layout: "/profile"
+    layout: "/PocketParliamentWebApp/profile"
   }
 ];
 
