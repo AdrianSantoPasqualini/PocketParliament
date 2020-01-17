@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/PocketParliamentWebApp/static/css/main.3e32f755.chunk.css",
-    "main.js": "/PocketParliamentWebApp/static/js/main.d55b8e51.chunk.js",
-    "main.js.map": "/PocketParliamentWebApp/static/js/main.d55b8e51.chunk.js.map",
+    "main.js": "/PocketParliamentWebApp/static/js/main.a77ef206.chunk.js",
+    "main.js.map": "/PocketParliamentWebApp/static/js/main.a77ef206.chunk.js.map",
     "runtime-main.js": "/PocketParliamentWebApp/static/js/runtime-main.4a693acc.js",
     "runtime-main.js.map": "/PocketParliamentWebApp/static/js/runtime-main.4a693acc.js.map",
     "static/css/2.0b7c9a72.chunk.css": "/PocketParliamentWebApp/static/css/2.0b7c9a72.chunk.css",
     "static/js/2.73fd23be.chunk.js": "/PocketParliamentWebApp/static/js/2.73fd23be.chunk.js",
     "static/js/2.73fd23be.chunk.js.map": "/PocketParliamentWebApp/static/js/2.73fd23be.chunk.js.map",
     "index.html": "/PocketParliamentWebApp/index.html",
-    "precache-manifest.22e41653bc3574c697e0d726a3f4a49b.js": "/PocketParliamentWebApp/precache-manifest.22e41653bc3574c697e0d726a3f4a49b.js",
+    "precache-manifest.cde39263414dd404aeac79422b8a9b06.js": "/PocketParliamentWebApp/precache-manifest.cde39263414dd404aeac79422b8a9b06.js",
     "service-worker.js": "/PocketParliamentWebApp/service-worker.js",
     "static/css/2.0b7c9a72.chunk.css.map": "/PocketParliamentWebApp/static/css/2.0b7c9a72.chunk.css.map",
     "static/css/main.3e32f755.chunk.css.map": "/PocketParliamentWebApp/static/css/main.3e32f755.chunk.css.map",
     "static/js/2.73fd23be.chunk.js.LICENSE": "/PocketParliamentWebApp/static/js/2.73fd23be.chunk.js.LICENSE",
-    "static/js/main.d55b8e51.chunk.js.LICENSE": "/PocketParliamentWebApp/static/js/main.d55b8e51.chunk.js.LICENSE",
+    "static/js/main.a77ef206.chunk.js.LICENSE": "/PocketParliamentWebApp/static/js/main.a77ef206.chunk.js.LICENSE",
     "static/media/MissingPhotoAvatar.jpg": "/PocketParliamentWebApp/static/media/MissingPhotoAvatar.600695d0.jpg",
     "static/media/parliamentvertical.jpg": "/PocketParliamentWebApp/static/media/parliamentvertical.689e7d30.jpg"
   },
@@ -23,6 +23,6 @@
     "static/css/2.0b7c9a72.chunk.css",
     "static/js/2.73fd23be.chunk.js",
     "static/css/main.3e32f755.chunk.css",
-    "static/js/main.d55b8e51.chunk.js"
+    "static/js/main.a77ef206.chunk.js"
   ]
 }

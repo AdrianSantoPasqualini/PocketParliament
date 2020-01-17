@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21c58b5613e8a531d01326cd84753a63",
+    "revision": "c29eb9920a63b9d0128678b5fb5f7a49",
     "url": "/PocketParliamentWebApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PocketParliamentWebApp/static/css/2.0b7c9a72.chunk.css"
   },
   {
-    "revision": "e202eae143299c3343c9",
+    "revision": "c18153a4cd0776aa0f19",
     "url": "/PocketParliamentWebApp/static/css/main.3e32f755.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PocketParliamentWebApp/static/js/2.73fd23be.chunk.js.LICENSE"
   },
   {
-    "revision": "e202eae143299c3343c9",
-    "url": "/PocketParliamentWebApp/static/js/main.d55b8e51.chunk.js"
+    "revision": "c18153a4cd0776aa0f19",
+    "url": "/PocketParliamentWebApp/static/js/main.a77ef206.chunk.js"
   },
   {
     "revision": "7269b0c4207b44d8a9e4f0b85c8a81d2",
-    "url": "/PocketParliamentWebApp/static/js/main.d55b8e51.chunk.js.LICENSE"
+    "url": "/PocketParliamentWebApp/static/js/main.a77ef206.chunk.js.LICENSE"
   },
   {
     "revision": "dd717d2447404b7e3bce",

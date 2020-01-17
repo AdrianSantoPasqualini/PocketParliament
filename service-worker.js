@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PocketParliamentWebApp/precache-manifest.22e41653bc3574c697e0d726a3f4a49b.js"
+  "/PocketParliamentWebApp/precache-manifest.cde39263414dd404aeac79422b8a9b06.js"
 );
 
 self.addEventListener('message', (event) => {
