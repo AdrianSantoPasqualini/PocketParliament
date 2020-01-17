@@ -30,8 +30,8 @@ const hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/PocketParliamentWebApp/profile" component={PocketParliament}/>
-      <Redirect from="/" to="/PocketParliamentWebApp/profile/newsfeed" />
+      <Route path="/PocketParliament/profile" component={PocketParliament}/>
+      <Redirect from="/" to="/PocketParliament/profile/newsfeed" />
     </Switch>
   </Router>,
   document.getElementById("root")

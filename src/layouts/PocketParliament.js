@@ -22,7 +22,7 @@ let ps;
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/PocketParliamentWebApp/profile") {
+      if (prop.layout === "/PocketParliament/profile") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -33,7 +33,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/" to="/PocketParliamentWebApp/profile/newsfeed" />
+    <Redirect from="/" to="/PocketParliament/profile/newsfeed" />
   </Switch>
 );
 
