@@ -40,7 +40,7 @@ class BillCard extends Component {
         const {votes} = this.state;
         if (votes.totalSize !== 0) {
             return (
-                <div style={{overflowY: "scroll", maxHeight: "310px"}}>
+                <div style={{overflowY: "auto", maxHeight: "310px"}}>
                     {votes.data && votes.data.map((vote, i) => {
                         return(
                             <Card key={vote.id} style={{marginTop: "10px"}}>

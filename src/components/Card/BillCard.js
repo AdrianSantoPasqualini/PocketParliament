@@ -109,7 +109,7 @@ class BillCard extends Component {
                                     <h5 style={{margin: "0", textAlign: "left", marginTop: "10px", color: "#3C4858"}}>Publications:</h5>
                                 </GridItem>
                                 <GridItem xs={12} sm={6} md={6}>
-                                    <div style={{paddingTop: "10px", maxHeight: "100px", overflowY: "scroll", color: "#3C4858"}}>
+                                    <div style={{paddingTop: "10px", maxHeight: "100px", overflowY: "auto", color: "#3C4858"}}>
                                         {billDetailed.publications && billDetailed.publications.map((publication, i) => {
                                             return(<div key={publication.url}><a target="_blank" rel="noopener noreferrer" href={publication.url}>{publication.title}</a></div>)
                                         })}
@@ -124,7 +124,7 @@ class BillCard extends Component {
                     tabName: "Events",
                     tabIcon: Event,
                     tabContent: (
-                        <div style={{overflowY: "scroll", maxHeight: "310px"}}>
+                        <div style={{overflowY: "auto", maxHeight: "310px"}}>
                             {billDetailed.events && billDetailed.events.reverse().map((event, i) => {
                                 return(
                                     <Card key={event.id} style={{marginTop: "10px"}}>
