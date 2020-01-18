@@ -25,7 +25,7 @@ const switchRoutes = (
       if (prop.layout === "/") {
         return (
           <Route
-            path={prop.layout + prop.path}
+            path={prop.layout}
             component={prop.component}
             key={key}
           />
@@ -33,7 +33,6 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/" to="/newsfeed" />
   </Switch>
 );
 
