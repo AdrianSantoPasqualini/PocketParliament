@@ -30,7 +30,7 @@ class BillCard extends Component {
         }
     }
     
-    componentWillMount() {
+    componentDidMount() {
         fetch('http://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())
                 .then(bill => {
@@ -39,7 +39,6 @@ class BillCard extends Component {
     }
     
     componentDidUpdate(prevProps) {
-        console.log("Updating");
         if (this.props.url !== prevProps.url) {
             fetch('http://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())

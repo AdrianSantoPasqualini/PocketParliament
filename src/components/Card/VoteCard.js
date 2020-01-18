@@ -28,7 +28,7 @@ class BillCard extends Component {
         }
     }
     
-    componentWillMount() {
+    componentDidMount() {
         fetch('http://billsearch.herokuapp.com' + this.props.url)
             .then(response => response.json())
             .then(voteList => {
@@ -38,7 +38,8 @@ class BillCard extends Component {
   
     render() {
         const {votes} = this.state;
-        if (votes.totalSize !== 0) {
+        console.log(votes);
+        if (!votes.error && votes.totalSize !== 0) {
             return (
                 <div style={{overflowY: "auto", maxHeight: "310px"}}>
                     {votes.data && votes.data.map((vote, i) => {

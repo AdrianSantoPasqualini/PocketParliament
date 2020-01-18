@@ -28,7 +28,7 @@ class MPView extends Component {
         this.setState({searchText: event.target.value});
     }
 
-    componentWillMount() {
+    componentDidMount() {
         fetch('http://api.openparliament.ca/politicians/?format=json')
             .then(response => response.json())
             .then(mplist => {

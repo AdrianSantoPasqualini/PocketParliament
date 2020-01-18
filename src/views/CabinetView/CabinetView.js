@@ -60,11 +60,10 @@ class CabinetView extends Component {
     render () {
         const {cabinet, searchText} = this.state;
 
-        const filteredCabinet = cabinet.filter(member => {
+        var filteredCabinet = cabinet ? cabinet.filter(member => {
             var memberText = member.position + member.name;
-            return memberText.toLowerCase().includes(searchText.toLowerCase());
-            }
-        );
+            return memberText.toLowerCase().includes(searchText.toLowerCase());})
+            : [];
 
         return (
             <div>

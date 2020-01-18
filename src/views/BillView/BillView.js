@@ -17,7 +17,7 @@ class BillView extends Component {
       this.setState({searchText: event.target.value});
     }
 
-    componentWillMount() {
+    componentDidMount() {
       fetch('http://billsearch.herokuapp.com/bills?size=1000')
         .then(response => response.json())
         .then(bills => {

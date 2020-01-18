@@ -41,8 +41,8 @@ class NewsFeed extends Component {
                 <SearchBar onTextChange={this.onSearchChange} headerText="NewsFeed" placeholderText="Search for a Date, Bill, or Topic"/>
                 <GridContainer>
                     {filteredNews.map((newsitem, i) => 
-                        <GridItem xs={12} sm={12} md={12}>
-                            <NewsCard key={i} title={newsitem.title} description={newsitem.description}
+                        <GridItem key={i} xs={12} sm={12} md={12}>
+                            <NewsCard  title={newsitem.title} description={newsitem.description}
                                     date={newsitem.date} tagline={newsitem.tagline}/>
                         </GridItem>
                     )}

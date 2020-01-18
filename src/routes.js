@@ -29,32 +29,32 @@ import CabinetView from "views/CabinetView/CabinetView.js";
 
 const dashboardRoutes = [
   {
-    path: "/newsfeed",
+    path: "newsfeed",
     name: "Newsfeed",
     icon: Notifications,
     component: NewsFeed,
-    layout: "/PocketParliament/profile"
+    layout: "/"
   },
   {
-    path: "/bills",
+    path: "bills",
     name: "Bills",
     icon: LibraryBooks,
     component: BillView,
-    layout: "/PocketParliament/profile"
+    layout: "/"
   },
   {
-    path: "/cabinet",
+    path: "cabinet",
     name: "Cabinet Members",
     icon: Parliament,
     component: CabinetView,
-    layout: "/PocketParliament/profile"
+    layout: "/"
   },
   {
-    path: "/mps",
+    path: "mps",
     name: "MP's",
     icon: Person,
     component: MPView,
-    layout: "/PocketParliament/profile"
+    layout: "/"
   }
 ];
 
