@@ -50,7 +50,7 @@ class CabinetView extends Component {
     }
 
     componentDidMount() {
-      fetch('http://billsearch.herokuapp.com/cabinet?size=1000')
+      fetch('https://billsearch.herokuapp.com/cabinet?size=1000')
         .then(response => response.json())
         .then(cabinetMembers => {
           this.setState({cabinet: cabinetMembers["data"]})

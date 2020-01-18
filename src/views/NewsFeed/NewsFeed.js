@@ -20,7 +20,7 @@ class NewsFeed extends Component {
     }
   
     componentDidMount() {
-      fetch('http://billsearch.herokuapp.com/news?size=1000')
+      fetch('https://billsearch.herokuapp.com/news?size=1000')
         .then(response => response.json())
         .then(newsfeed => {
           this.setState({news: newsfeed["data"]})

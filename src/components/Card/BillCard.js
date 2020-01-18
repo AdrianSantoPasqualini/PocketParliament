@@ -31,7 +31,7 @@ class BillCard extends Component {
     }
     
     componentDidMount() {
-        fetch('http://billsearch.herokuapp.com' + this.props.url)
+        fetch('https://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())
                 .then(bill => {
                     this.setState({billDetailed: bill});
@@ -40,7 +40,7 @@ class BillCard extends Component {
     
     componentDidUpdate(prevProps) {
         if (this.props.url !== prevProps.url) {
-            fetch('http://billsearch.herokuapp.com' + this.props.url)
+            fetch('https://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())
                 .then(bill => {
                     this.setState({billDetailed: bill});

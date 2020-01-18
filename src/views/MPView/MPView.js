@@ -29,7 +29,7 @@ class MPView extends Component {
     }
 
     componentDidMount() {
-        fetch('http://api.openparliament.ca/politicians/?format=json')
+        fetch('https://api.openparliament.ca/politicians/?format=json')
             .then(response => response.json())
             .then(mplist => {
                 this.setState({mps: mplist["objects"]});

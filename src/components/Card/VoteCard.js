@@ -29,7 +29,7 @@ class BillCard extends Component {
     }
     
     componentDidMount() {
-        fetch('http://billsearch.herokuapp.com' + this.props.url)
+        fetch('https://billsearch.herokuapp.com' + this.props.url)
             .then(response => response.json())
             .then(voteList => {
             this.setState({votes: voteList});

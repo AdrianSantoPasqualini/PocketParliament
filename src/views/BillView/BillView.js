@@ -18,7 +18,7 @@ class BillView extends Component {
     }
 
     componentDidMount() {
-      fetch('http://billsearch.herokuapp.com/bills?size=1000')
+      fetch('https://billsearch.herokuapp.com/bills?size=1000')
         .then(response => response.json())
         .then(bills => {
           this.setState({bills: bills["data"]});
