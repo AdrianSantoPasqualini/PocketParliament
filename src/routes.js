@@ -43,13 +43,6 @@ const dashboardRoutes = [
     layout: "/"
   },
   {
-    path: "cabinet",
-    name: "Cabinet Members",
-    icon: Parliament,
-    component: CabinetView,
-    layout: "/"
-  },
-  {
     path: "mps",
     name: "MP's",
     icon: Person,

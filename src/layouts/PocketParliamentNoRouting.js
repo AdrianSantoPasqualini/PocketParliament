@@ -92,22 +92,6 @@ class PocketParliamentNoRouting extends Component {
                     </div>
                 </div> 
             )
-        } else if (view === "cabinet") {
-            return (
-                <div style={{wrapper}}>
-                    <Sidebar
-                        routes={routes}
-                        logoText={"Pocket Parliament"}
-                        image={bgImage}
-                        color={"green"}
-                        onNavClick={this.onNavClick}
-                        active={"cabinet"}
-                    />
-                    <div style={mainPanel}>
-                        <CabinetView style={{content}} />
-                    </div>
-                </div> 
-            )
         } else if (view === "mps") {
             return (
                 <div style={{wrapper}}>
