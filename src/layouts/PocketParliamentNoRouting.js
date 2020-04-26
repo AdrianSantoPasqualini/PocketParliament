@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Hidden from "@material-ui/core/Hidden";
 
 // core components
 import NewsFeed from "views/NewsFeed/NewsFeed.js";
@@ -24,7 +25,7 @@ const wrapper = {
     height: "100vh"
 };
 
-const mainPanel = {
+const mainPanelWithDrawer = {
     width: `calc(100% - ${drawerWidth}px)`,
     overflowY: "auto",
     overflowX: "hidden",
@@ -36,10 +37,20 @@ const mainPanel = {
     padding: "30px 30px",
 }
 
-const content = {
-   
-    minHeight: "calc(100vh - 123px)",
+const mainPanelWithoutDrawer = {
+    width: "100%",
+    overflowY: "auto",
+    overflowX: "hidden",
+    position: "relative",
+    float: "right",
+    ...transition,
+    maxHeight: "100%",
+    overflowScrolling: "touch",
+    padding: "30px 30px",
+}
 
+const content = {
+    minHeight: "calc(100vh - 123px)",
 }
 
 
@@ -71,9 +82,16 @@ class PocketParliamentNoRouting extends Component {
                         onNavClick={this.onNavClick}
                         active={"newsfeed"}
                     />
-                    <div style={mainPanel}>
-                        <NewsFeed style={{content}} />
-                    </div>
+                    <Hidden smDown>
+                        <div style={mainPanelWithDrawer}>
+                            <NewsFeed style={{content}} />
+                        </div>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <div style={mainPanelWithoutDrawer}>
+                            <NewsFeed style={{content}} />
+                        </div>
+                    </Hidden>
                 </div> 
             )
         } else if (view === "bills") {
@@ -87,9 +105,16 @@ class PocketParliamentNoRouting extends Component {
                         onNavClick={this.onNavClick}
                         active={"bills"}
                     />
-                    <div style={mainPanel}>
-                        <BillView style={{content}} />
-                    </div>
+                    <Hidden smDown>
+                        <div style={mainPanelWithDrawer}>
+                            <BillView style={{content}} />
+                        </div>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <div style={mainPanelWithoutDrawer}>
+                            <BillView style={{content}} />
+                        </div>
+                    </Hidden>
                 </div> 
             )
         } else if (view === "mps") {
@@ -103,9 +128,16 @@ class PocketParliamentNoRouting extends Component {
                         onNavClick={this.onNavClick}
                         active={"mps"}
                     />
-                    <div style={mainPanel}>
-                        <MPView style={{content}} />
-                    </div>
+                    <Hidden smDown>
+                        <div style={mainPanelWithDrawer}>
+                            <MPView style={{content}} />
+                        </div>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <div style={mainPanelWithoutDrawer}>
+                            <MPView style={{content}} />
+                        </div>
+                    </Hidden>
                 </div> 
             )
         } 

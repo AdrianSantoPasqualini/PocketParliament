@@ -43,8 +43,8 @@ export default function MPCard({name, image, party, riding}) {
     return (
         <div>
         <Card>
-            <CardHeader color={partyColor} stats>
-                <img className={classes.MPImage} 
+            <CardHeader color={partyColor} stats style={{textAlign: "center"}}>
+                <img className={classes.MPImage}
                     alt="mpicon" 
                     src={mpImageSrc} />
             </CardHeader>
