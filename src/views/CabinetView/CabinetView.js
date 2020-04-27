@@ -37,6 +37,8 @@ const styles = {
 
 
 class CabinetView extends Component {
+    mounted = false;
+
     constructor() {
       super()
       this.state = {
@@ -50,13 +52,20 @@ class CabinetView extends Component {
     }
 
     componentDidMount() {
+      this.mounted = true;
       fetch('https://billsearch.herokuapp.com/cabinet?size=1000')
         .then(response => response.json())
         .then(cabinetMembers => {
-          this.setState({cabinet: cabinetMembers["data"]})
+          if (this.mounted) {
+            this.setState({cabinet: cabinetMembers["data"]});
+          }
         });
     }
-  
+
+    componentWillUnmount() {
+      this.mounted = false;
+    }
+
     render () {
         const {cabinet, searchText} = this.state;
 

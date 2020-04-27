@@ -22,6 +22,7 @@ const stats = {
 };
 
 class BillCard extends Component {
+    mounted = true;
 
     constructor(props) {
         super(props)
@@ -31,10 +32,13 @@ class BillCard extends Component {
     }
     
     componentDidMount() {
+        this.mounted = true;
         fetch('https://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())
                 .then(bill => {
-                    this.setState({billDetailed: bill});
+                    if (this.mounted) {
+                        this.setState({billDetailed: bill});
+                    }
                 });
     }
     
@@ -43,9 +47,15 @@ class BillCard extends Component {
             fetch('https://billsearch.herokuapp.com' + this.props.url)
                 .then(response => response.json())
                 .then(bill => {
-                    this.setState({billDetailed: bill});
+                    if (this.mounted) {
+                        this.setState({billDetailed: bill});
+                    }
                 });
         }
+    }
+
+    componentWillUnmount() {
+        this.mounted = false;
     }
 
     render() {

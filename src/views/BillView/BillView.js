@@ -5,6 +5,8 @@ import SearchBar from "components/Navbars/SearchBar.js";
 import BillCard from "components/Card/BillCard.js";
 
 class BillView extends Component {
+    mounted = false;
+
     constructor() {
       super()
       this.state = {
@@ -18,11 +20,18 @@ class BillView extends Component {
     }
 
     componentDidMount() {
+      this.mounted = true;
       fetch('https://billsearch.herokuapp.com/bills?size=1000')
         .then(response => response.json())
         .then(bills => {
-          this.setState({bills: bills["data"]});
+          if (this.mounted) {
+            this.setState({bills: bills["data"]});
+          }
         });
+    }
+
+    componentWillUnmount() {
+      this.mounted = false;
     }
   
     render () {

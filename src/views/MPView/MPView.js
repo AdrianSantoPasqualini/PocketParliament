@@ -16,6 +16,8 @@ function shuffleArray(array) {
 }
 
 class MPView extends Component {
+    mounted = false;
+
     constructor() {
         super()
         this.state = {
@@ -29,11 +31,18 @@ class MPView extends Component {
     }
 
     componentDidMount() {
+        this.mounted = true;
         fetch('https://api.openparliament.ca/politicians/?format=json')
             .then(response => response.json())
             .then(mplist => {
-                this.setState({mps: mplist["objects"]});
-            })
+                if (this.mounted) {
+                    this.setState({mps: mplist["objects"]});
+                }
+            });
+    }
+
+    componentWillUnmount() {
+        this.mounted = false;
     }
     
     render () {

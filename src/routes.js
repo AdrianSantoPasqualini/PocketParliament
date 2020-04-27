@@ -30,6 +30,13 @@ const dashboardRoutes = [
     icon: Person,
     component: MPView,
     layout: "/"
+  },
+  {
+    path: "cabinet",
+    name: "Cabinet Members",
+    icon: Parliament,
+    component: CabinetView,
+    layout: "/"
   }
 ];
 

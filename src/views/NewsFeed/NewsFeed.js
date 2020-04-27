@@ -7,6 +7,8 @@ import NewsCard from "components/Card/NewsCard.js";
 import SearchBar from "components/Navbars/SearchBar.js";
 
 class NewsFeed extends Component {
+    mounted = true;
+
     constructor() {
       super()
       this.state = {
@@ -20,11 +22,18 @@ class NewsFeed extends Component {
     }
   
     componentDidMount() {
-      fetch('https://billsearch.herokuapp.com/news?size=1000')
-        .then(response => response.json())
-        .then(newsfeed => {
-          this.setState({news: newsfeed["data"]})
-        });
+        this.mounted = true;
+        fetch('https://billsearch.herokuapp.com/news?size=1000')
+            .then(response => response.json())
+            .then(newsfeed => {
+                if (this.mounted) {
+                    this.setState({news: newsfeed["data"]})
+                }
+            });
+    }
+
+    componentWillUnmount() {
+        this.mounted = false;
     }
   
     render () {
